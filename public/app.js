@@ -9,6 +9,16 @@ $("#scrape").on("click", function(){
     })
 });
 
+$("#clear").on("click", function(){
+    $.ajax({
+        method: "DELETE",
+        url: "/articles"
+    }).done(function(data){
+        console.log(data)
+        window.location = "/"
+    })
+});
+
 
 $(".save").on("click", function(event){
     var id = $(this).data("id")
@@ -33,3 +43,4 @@ $(".delete").on("click", function(event){
         window.location = "/saved"
     })
 })
+

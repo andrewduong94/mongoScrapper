@@ -2,6 +2,10 @@ h1 {
     text-align: center;
 };
 
+h2 {
+    text-decoration: underline;
+};
+
 #scrape{
     align-items: center
 };

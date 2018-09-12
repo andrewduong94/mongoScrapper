@@ -1,9 +1,10 @@
 <h1>Scrape with Mongo</h1>
 
 <button type="button" class="btn btn-primary" id="scrape">Scrape Articles</button>
-
-<h2>Articles</h2>
-
+<button type="button" class="btn btn-danger" id="clear">Clear Articles</button>
+<br>
+<h2><u>Articles</u></h2>
+<hr>
 <div id="wrapper">
     <div id="articles">
         {{#if article}}
@@ -19,6 +20,7 @@
                     <button type="button" class="btn btn-primary save" data-id="{{this.id}}" id="save">Save</button>
                 </div>
             </div>
+            <hr>
             {{/each}}
         {{else}}
         <h5>Looks like we don't have any new articles</h5>

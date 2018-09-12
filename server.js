@@ -86,6 +86,16 @@ app.get("/articles", function(req,res){
         })
 })
 
+app.delete("/articles", function(req,res){
+    db.Articles.deleteMany({}) 
+        .then(function(dbArticle){
+            res.json(dbArticle);
+        })
+        .catch(function(err){
+            res.json(err);
+        })
+})
+
 app.get("/saved", function(req,res){
     db.Articles.find({saved: true}, function(error, data){
         var hbsObject = {
