@@ -1,0 +1,11 @@
+h1 {
+    text-align: center;
+};
+
+#scrape{
+    align-items: center
+};
+
+.articleItem{
+    border: 5px solid black;
+}

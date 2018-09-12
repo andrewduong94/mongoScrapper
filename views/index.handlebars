@@ -1,0 +1,27 @@
+<h1>Scrape with Mongo</h1>
+
+<button type="button" class="btn btn-primary" id="scrape">Scrape Articles</button>
+
+<h2>Articles</h2>
+
+<div id="wrapper">
+    <div id="articles">
+        {{#if article}}
+            {{#each article}}
+            <div class="articleItem">
+                <div class="panel-heading">
+                    <h4>{{this.title}}</h4>
+                </div>
+                <div class="panel-body">
+                    <p>{{this.desc}}</p>
+                    <a href="{{this.link}}">Link</a>
+                    <br><br>
+                    <button type="button" class="btn btn-primary save" data-id="{{this.id}}" id="save">Save</button>
+                </div>
+            </div>
+            {{/each}}
+        {{else}}
+        <h5>Looks like we don't have any new articles</h5>
+        {{/if}}
+    </div>
+</div>

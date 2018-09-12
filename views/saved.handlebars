@@ -1,0 +1,25 @@
+<h1>Scrape with Mongo</h1>
+
+<h2>Saved Articles</h2>
+
+
+<div id="wrapper">
+    <div id="articles">
+        {{#if savedArticles}}
+            {{#each savedArticles}}
+            <div class="articleItem">
+                <div class="panel-heading">
+                    <h4>{{this.title}}</h4>
+                </div>
+                <div class="panel-body">
+                    <p>{{this.desc}}</p>
+                    <a href="{{this.link}}">Link</a>
+                    <br><br>
+                    <button type="button" class="btn btn-danger delete" data-id="{{this.id}}" id="delete">Delete</button>
+                    <button type="button" class="btn btn-info addNote" data-toggle="modal" data-target="#noteModal{{this._id}}" data-id={{this._id}}>Add a Note</button>
+                </div>
+            </div>
+            {{/each}}
+        {{/if}}
+    </div>
+</div>
